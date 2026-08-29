@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { FadeIn } from '../components/FadeIn';
+---
+
+<Layout
+  title="Доставка та оплата по Одесі — Floral Studio"
+  description="Умови кур'єрської доставки авторських квітів по районах Одеси."
+>
+  <section class="pt-32 pb-16 sm:pt-40 sm:pb-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      
+      <FadeIn client:load className="text-center">
+        <p class="text-[10px] sm:text-xs uppercase tracking-widest font-medium text-[#1A1A1A]/50 mb-3">Інформація</p>
+        <h1 class="font-normal text-4xl sm:text-5xl text-[#1A1A1A] mb-4">
+          Оплата та Доставка
+        </h1>
+        <p class="text-sm font-light text-[#1A1A1A]/70 max-w-2xl mx-auto">
+          Прозорі умови для вашого комфорту
+        </p>
+      </FadeIn>
+
+      <hr class="border-t border-[#1A1A1A]/10 w-full my-16 sm:my-24" />
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        
+        <div>
+          <h3 class="font-normal text-2xl sm:text-3xl text-[#1A1A1A] mb-8">
+            Кур'єрська доставка
+          </h3>
+          
+          <div class="space-y-8 text-sm font-light text-[#1A1A1A]/70 leading-relaxed">
+            <p>
+              Ми перевозимо букети тільки у вертикальному положенні в спеціальних аквапаках із водою, тому квіти залишаються ідеально свіжими від моменту збору до моменту вручення.
+            </p>
+            
+            <div class="border-t border-[#1A1A1A]/10 pt-8 space-y-4">
+              <div class="flex justify-between items-center border-b border-[#1A1A1A]/5 pb-4">
+                <span>Замовлення від 2 500 ₴</span>
+                <span class="text-[#1A1A1A] font-medium tracking-wide">Безкоштовно</span>
+              </div>
+              <div class="flex justify-between items-center border-b border-[#1A1A1A]/5 pb-4">
+                <span>Замовлення до 2 500 ₴</span>
+                <span class="text-[#1A1A1A] tracking-wide">150 ₴</span>
+              </div>
+              <div class="flex justify-between items-center pb-4">
+                <span>Самовивіз (вул. Грецька, 25)</span>
+                <span class="text-[#1A1A1A] font-medium tracking-wide">Безкоштовно</span>
+              </div>
+            </div>
+
+            <p class="pt-4">
+              Доставляємо в усі райони міста: Приморський, Аркадія, Фонтан, Таїрова, Черемушки, селище Котовського, Совіньйон.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-normal text-2xl sm:text-3xl text-[#1A1A1A] mb-8">
+            Оплата
+          </h3>
+
+          <div class="space-y-10">
+            <div>
+              <h4 class="text-[10px] sm:text-xs uppercase tracking-widest font-medium text-[#1A1A1A] mb-3">Онлайн карткою</h4>
+              <p class="text-sm font-light text-[#1A1A1A]/70 leading-relaxed">
+                Безпечна оплата Visa / MasterCard, а також через Apple Pay та Google Pay.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-[10px] sm:text-xs uppercase tracking-widest font-medium text-[#1A1A1A] mb-3">При отриманні</h4>
+              <p class="text-sm font-light text-[#1A1A1A]/70 leading-relaxed">
+                Готівкою або банківською картою через термінал кур'єра.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-[10px] sm:text-xs uppercase tracking-widest font-medium text-[#1A1A1A] mb-3">Гарантія свіжості</h4>
+              <p class="text-sm font-light text-[#1A1A1A]/70 leading-relaxed">
+                Якщо квітка пошкодилася під час транспортування, ми безкоштовно замінимо букет протягом 2 годин.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>

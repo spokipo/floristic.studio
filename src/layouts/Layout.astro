@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { CartDrawer } from '../components/CartDrawer';
+import { ProductModal } from '../components/ProductModal';
+import { QuickOrderModal } from '../components/QuickOrderModal';
+import { BookingModal } from '../components/BookingModal';
+import { Toast } from '../components/Toast';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = 'Floral Studio — Одеська майстерня авторської флористики',
+  description = 'Стильний мінімалістичний інтернет-магазин квітів в Одесі. Садові букети у французькому стилі, доставка від 90 хвилин, безкоштовна фірмова листівка.',
+  image = 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=1200&q=80',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="uk" class="h-full scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="квіти Одеса, доставка квітів Одеса, букет Одеса, купити квіти, садові троянди, весільний букет, півонії Одеса, Floral Studio" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:locale" content="uk_UA" />
+
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <ViewTransitions />
+  </head>
+  <body class="min-h-full flex flex-col bg-[#FAF7F2] text-[#1A1A1A] antialiased">
+    <!-- Persisted Header -->
+    <Header />
+
+    <!-- Main Content Area -->
+    <main class="flex-1" transition:animate="fade">
+      <slot />
+    </main>
+
+    <!-- Global Interactive Islands -->
+    <CartDrawer client:load transition:persist="cart-drawer" />
+    <ProductModal client:load transition:persist="product-modal" />
+    <QuickOrderModal client:load transition:persist="quick-order-modal" />
+    <BookingModal client:load transition:persist="booking-modal" />
+    <Toast client:load transition:persist="toast" />
+
+    <!-- Static Footer -->
+    <Footer />
+  </body>
+</html>
+

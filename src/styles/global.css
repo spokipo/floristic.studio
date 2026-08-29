@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-serif: 'Arsenal', system-ui, sans-serif;
+    --font-sans: 'Arsenal', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scrollbar-gutter: stable;
+  }
+
+  ::selection {
+    background-color: #E8A598;
+    color: #1A1A1A;
+  }
+}
+
+
+
+/* Custom Date input styling */
+input[type="date"] {
+  position: relative;
+  font-family: var(--font-sans);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  filter: invert(10%) sepia(10%) saturate(500%) hue-rotate(340deg);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .font-serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+  .lock-scroll {
+    overflow: hidden !important;
+  }
+}

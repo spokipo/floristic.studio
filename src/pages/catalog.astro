@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CatalogSection } from '../components/CatalogSection';
+import { FadeIn } from '../components/FadeIn';
+---
+
+<Layout
+  title="Каталог букетів — Floral Studio Одеса"
+  description="Оберіть свій ідеальний букет: садові квіти, півонії, весільні композиції, капелюшні коробки."
+>
+  <section class="pt-32 pb-4 sm:pt-40 sm:pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <FadeIn client:load className="text-center">
+        <p class="text-[10px] sm:text-xs uppercase tracking-widest font-medium text-[#1A1A1A]/50 mb-3">Колекція</p>
+        <h1 class="font-normal text-4xl sm:text-5xl text-[#1A1A1A] mb-4">
+          Каталог квіткових композицій
+        </h1>
+        <p class="text-sm font-light text-[#1A1A1A]/70 max-w-2xl mx-auto">
+          Усі букети створюються виключно зі свіжих поставок у день доставки.
+        </p>
+      </FadeIn>
+    </div>
+  </section>
+
+  <div>
+    <CatalogSection client:load showTitle={false} />
+  </div>
+
+</Layout>

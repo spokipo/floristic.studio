@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CheckoutForm } from '../components/CheckoutForm';
+import { FadeIn } from '../components/FadeIn';
+---
+
+<Layout
+  title="Оформлення замовлення — Floral Studio"
+  description="Оформлення доставки квітів по Одесі."
+>
+  <section class="pt-32 pb-4 sm:pt-40 sm:pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <FadeIn client:load className="text-center">
+        <p class="text-[10px] sm:text-xs uppercase tracking-widest font-medium text-[#1A1A1A]/50 mb-3">Кошик</p>
+        <h1 class="font-normal text-4xl sm:text-5xl text-[#1A1A1A] mb-4">
+          Оформлення замовлення
+        </h1>
+        <p class="text-sm font-light text-[#1A1A1A]/70 max-w-2xl mx-auto">
+          Заповніть дані для доставки або оберіть самовивіз із нашої студії.
+        </p>
+      </FadeIn>
+      <hr class="border-t border-[#1A1A1A]/10 w-full mt-16 sm:mt-24" />
+    </div>
+  </section>
+
+  <CheckoutForm client:only="react" />
+</Layout>

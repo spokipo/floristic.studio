@@ -1,0 +1,92 @@
+---
+import { Instagram, Send, Phone, MapPin, Clock } from 'lucide-react';
+---
+<footer class="bg-[#FAF7F2] pt-16 sm:pt-24 pb-12 text-[#1A1A1A] border-t border-[#1A1A1A]/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
+      
+      {/* Col 1: Brand */}
+      <div class="space-y-4">
+        <a href="/" class="inline-block">
+          <span class="font-serif text-3xl font-normal tracking-wide">
+            Floral Studio
+          </span>
+          <p class="text-[10px] tracking-[0.25em] uppercase text-[#1A1A1A]/50 mt-1">
+            Odesa • Floral Atelier
+          </p>
+        </a>
+      </div>
+
+      {/* Col 2: Menu */}
+      <div class="space-y-6">
+        <h4 class="text-xs uppercase tracking-widest font-semibold">
+          Меню
+        </h4>
+        <ul class="space-y-3 text-sm font-light text-[#1A1A1A]/70">
+          <li>
+            <a href="/catalog" class="hover:text-[#1A1A1A] transition-colors">Каталог</a>
+          </li>
+          <li>
+            <a href="/prostir" class="hover:text-[#1A1A1A] transition-colors">Простір</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:text-[#1A1A1A] transition-colors">Про нас</a>
+          </li>
+          <li>
+            <a href="/delivery" class="hover:text-[#1A1A1A] transition-colors">Доставка та оплата</a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Col 3: Contacts */}
+      <div class="space-y-6">
+        <h4 class="text-xs uppercase tracking-widest font-semibold">
+          Контакти
+        </h4>
+        <ul class="space-y-4 text-sm font-light text-[#1A1A1A]/70">
+          <li>
+            <a href="tel:+380671234567" class="hover:text-[#1A1A1A] transition-colors flex items-center gap-2">
+              <Phone stroke-width="1.5" class="w-4 h-4" />
+              <span>+38 (067) 123-45-67</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/floral_studio_odesa" target="_blank" class="hover:text-[#1A1A1A] transition-colors flex items-center gap-2">
+              <Send stroke-width="1.5" class="w-4 h-4" />
+              <span>Telegram</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank" class="hover:text-[#1A1A1A] transition-colors flex items-center gap-2">
+              <Instagram stroke-width="1.5" class="w-4 h-4" />
+              <span>Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Col 4: Location */}
+      <div class="space-y-6">
+        <h4 class="text-xs uppercase tracking-widest font-semibold">
+          Майстерня
+        </h4>
+        <ul class="space-y-4 text-sm font-light text-[#1A1A1A]/70">
+          <li class="flex items-start gap-2">
+            <MapPin stroke-width="1.5" class="w-4 h-4 mt-0.5 shrink-0" />
+            <span>м. Одеса, вул. Грецька, 25</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <Clock stroke-width="1.5" class="w-4 h-4 mt-0.5 shrink-0" />
+            <span>Щодня з 08:00 до 20:00</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    {/* Bottom */}
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 border-t border-[#1A1A1A]/10">
+      <p>© 2026 Floral Studio. Всі права захищено.</p>
+    </div>
+  </div>
+</footer>

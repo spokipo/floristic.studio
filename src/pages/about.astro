@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { FadeIn } from '../components/FadeIn';
+---
+
+<Layout
+  title="Про майстерню — Floral Studio Одеса"
+  description="Історія створення квіткової студії в Одесі. Філософія французького саду."
+>
+
+  <section class="pt-32 pb-16 sm:pt-40 sm:pb-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <FadeIn client:load className="text-center">
+        <p class="text-[10px] sm:text-xs uppercase tracking-widest font-medium text-[#1A1A1A]/50 mb-3">Про майстерню</p>
+        <h1 class="font-normal text-4xl sm:text-5xl text-[#1A1A1A] mb-4">
+          Французький сад<br class="hidden sm:block" /> біля Чорного моря
+        </h1>
+        <p class="text-sm font-light text-[#1A1A1A]/70 max-w-2xl mx-auto">
+          Floral Studio народилася з любові до витонченої природи, ранкової тиші та бажання дарувати справжні емоції.
+        </p>
+      </FadeIn>
+
+      <hr class="border-t border-[#1A1A1A]/10 w-full my-16 sm:my-24" />
+
+      <div class="mt-16 sm:mt-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-left">
+        <div class="space-y-6">
+
+          <div class="space-y-4 text-sm text-[#1A1A1A]/70 font-light leading-relaxed">
+            <p>
+              Класична комерційна флористика часто ховає квіти за шарами блискучого пластику та жорсткими каркасами. Ми пішли іншим шляхом.
+            </p>
+            <p>
+              Ми надихаємося французьким пейзажним стилем: невагомістю польових трав, витонченими вигинами гілочок шавлії та евкаліпту, пишними садовими півоніями.
+            </p>
+            <p>
+              Кожен наш букет нагадує щойно зібраний ранковий оберемок у прованському саду.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full max-w-lg mx-auto lg:max-w-none">
+          <img
+            src="https://images.unsplash.com/photo-1787478183469-58b5cd041ddd?q=80&w=816&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Floral Studio"
+            class="w-full aspect-square md:aspect-[4/3] lg:aspect-[4/3] object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="care" class="py-16 sm:py-24 border-t border-[#1A1A1A]/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-[10px] sm:text-xs uppercase tracking-widest font-medium text-[#1A1A1A]/50 mb-4">Турбота</p>
+        <h2 class="font-normal text-4xl sm:text-5xl text-[#1A1A1A] mb-4">
+          Догляд за букетом
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div>
+          <h3 class="text-xs uppercase tracking-widest font-medium text-[#1A1A1A] mb-4">1. Підрізка</h3>
+          <p class="text-sm font-light text-[#1A1A1A]/70 leading-relaxed">
+            Зрізайте стебла під кутом 45° гострим ножем на 1-2 см. Не використовуйте ножиці.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xs uppercase tracking-widest font-medium text-[#1A1A1A] mb-4">2. Вода</h3>
+          <p class="text-sm font-light text-[#1A1A1A]/70 leading-relaxed">
+            Використовуйте чисту прохолодну воду. Змінюйте воду щодня.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xs uppercase tracking-widest font-medium text-[#1A1A1A] mb-4">3. Підживлення</h3>
+          <p class="text-sm font-light text-[#1A1A1A]/70 leading-relaxed">
+            Додайте пакетик Chrysal (йде в комплекті) у воду для продовження життя букета.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xs uppercase tracking-widest font-medium text-[#1A1A1A] mb-4">4. Місце</h3>
+          <p class="text-sm font-light text-[#1A1A1A]/70 leading-relaxed">
+            Тримайте букет подалі від сонця, протягів, кондиціонерів та фруктів.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

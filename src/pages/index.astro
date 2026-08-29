@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Hero } from '../components/Hero';
+import { WorkshopFeatures } from '../components/WorkshopFeatures';
+import { CatalogSection } from '../components/CatalogSection';
+
+import { FloristConsultation } from '../components/FloristConsultation';
+import { InstagramGrid } from '../components/InstagramGrid';
+---
+
+<Layout
+  title="Floral Studio Одеса — Авторська флористика у стилі французького саду"
+  description="Стильний мінімалістичний інтернет-магазин квітів в Одесі. Авторські букети, півонії, садові троянди, доставка від 90 хв, безкоштовна фірмова листівка."
+>
+  <!-- Hero Section -->
+  <Hero client:load />
+
+  <!-- 4 Features of Workshop -->
+  <WorkshopFeatures client:load />
+
+  <!-- 3. New Collection Horizontal Scroll -->
+  <CatalogSection client:load showTitle={true} limit={4} />
+
+  <!-- 4. Consult CTA -->
+  <FloristConsultation />
+    
+
+
+  <!-- 6. Instagram Visuals -->
+  <InstagramGrid client:visible />
+</Layout>
