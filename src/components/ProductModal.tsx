@@ -17,53 +17,19 @@ export const ProductModal: React.FC = () => {
     if (bouquet) {
       document.body.style.overflow = 'hidden';
       
-      // We need a small timeout to let the DOM render before observing
-      const timer = setTimeout(() => {
-        if (!scrollContainerRef.current || !inlineButtonRef.current) return;
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            setIsInlineButtonInView(entry.isIntersecting);
-          },
-          {
-            root: scrollContainerRef.current,
-            threshold: 0,
-          }
-        );
-        observer.observe(inlineButtonRef.current);
-        
-        // Save observer to a variable to clean it up
-        (inlineButtonRef as any).current_observer = observer;
-      }, 100);
-      
-      return () => {
-        document.body.style.overflow = '';
-        clearTimeout(timer);
-        if ((inlineButtonRef as any).current_observer) {
-          (inlineButtonRef as any).current_observer.disconnect();
-        }
-      };
-    } else {
-      document.body.style.overflow = '';
-      setIsInlineButtonInView(false);
-    }
-  }, [bouquet]);
-
-  const currentSizeOption = bouquet ? bouquet.sizes[selectedSize] : undefined;
-  const currentPrice = currentSizeOption ? currentSizeOption.price : (bouquet ? bouquet.price : 0);
-
-  const handleAddToCart = () => {
-    if (bouquet) {
-      addToCart(bouquet, selectedSize, 1);
-      closeQuickView();
-    }
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    // Hide floating button when within 120px of the bottom of the scrolling content
+    const isBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 120;
+    setIsInlineButtonInView(isBottom);
   };
 
   return (
     <AnimatePresence>
       {bouquet && (
         <div 
-          ref={scrollContainerRef}
           className="fixed inset-0 z-50 overflow-y-auto flex items-start sm:items-center justify-center p-0 sm:p-6 lg:p-8"
+          onScroll={handleScroll}
         >
           {/* Backdrop */}
           <motion.div
